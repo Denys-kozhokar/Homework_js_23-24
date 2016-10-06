@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Dz 23-24</title>
+	<link rel="stylesheet" href="css/style.css">
+	<script data-main="js/main" src="js/require.js"></script>
+</head>
+<body>
+	<div class="container">
+		<h1>ToDoList</h1>
+	</div>
+	
+	<script type="text/template" id="wrapper_template">
+    <div class="wrapper">
+    	<input type="text" class="item__value">
+    	<button class="item__add btn">Add</button>
+    	<ul class="list"></ul>
+    </div>
+    </script>
+    <script type="text/template" id="list_template">
+        <% for(var i = 0; i < data.length; i++) { %>
+        <li class="item">
+        <%-data[i]%>
+        <button data-value="<%-data[i]%>" class="item__edit btn">Edit</button>
+        <button data-value="<%-data[i]%>" class="item__delite btn">Delete</button>
+        </li>
+        <% } %>
+	</script>
+</body>
+</html>
